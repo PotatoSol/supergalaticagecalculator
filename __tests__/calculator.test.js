@@ -9,7 +9,7 @@ test('Declare a User Object', () =>{
 test('setAge()', () => {
   const myUser = new User();
   myUser.setAge(30);
-  expect(myUser.age).toEqual(20);
+  expect(myUser.age).toEqual(30);
 });
 test('calculateAge()', () => {
   const myUser = new User();
