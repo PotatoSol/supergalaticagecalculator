@@ -16,5 +16,5 @@ test('calculateYearsSince()', () => {
 });
 test('calculateYearsUntil()', () => {
   const myUser = new User(30);
-  expect(myUser.calculateYearsUntil(40)).toEqual(20);
+  expect(myUser.calculateYearsUntil(40)).toEqual(10);
 });
