@@ -17,7 +17,7 @@ export class User{
     return this.age/yearLength;
   }
 
-  calculateYearsSince(){
-
+  calculateYearsSince(targetYear){
+    return this.age - targetYear;
   }
 }
