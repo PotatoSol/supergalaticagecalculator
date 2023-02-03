@@ -1,5 +1,13 @@
 import {User} from "./../src/js/calculator.js";
 //import {Game} from "./../src/js/game.js";
-console.log('hello!');
+function main(input){
+  console.log(input);
+}
 
-console.log('please enter your name');
+window.addEventListener("load", function(){
+  console.log('hehe')
+  document.getElementById("ageForm").addEventListener("submit",function(event){
+    event.preventDefault();
+    main(parseInt(document.getElementById("age").value));
+  });
+});
