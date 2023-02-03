@@ -26,3 +26,8 @@ test('calculateYearsUntil()', () => {
   myUser.setAge(30);
   expect(myUser.calculateYearsUntil(40)).toEqual(10);
 });
+test('setPlanet()', () => {
+  const myUser = new User();
+  myUser.setPlanet("mercury");
+  expect(myUser.planet).toEqual("mercury");
+});
