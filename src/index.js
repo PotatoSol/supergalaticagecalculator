@@ -1,6 +1,6 @@
 import {User} from "./../src/js/calculator.js";
 
-function handleSubmit(input){
+function handleAgeSubmit(input){
   if(input.length === 0){
     //catch that nothing was put in, and yell at the user
     console.log('hello');
@@ -14,10 +14,17 @@ function handleSubmit(input){
   }
 }
 
+function handlePlanetSubmit(input){
+  console.log(input);
+}
+
 window.addEventListener("load", function(){
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
-    handleSubmit(document.getElementById("age").value);
-    
+    handleAgeSubmit(document.getElementById("age").value);
+  });
+  document.getElementById("planetForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    handlePlanetSubmit(document.getElementById("planet").value);
   });
 });
