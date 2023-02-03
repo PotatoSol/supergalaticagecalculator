@@ -15,7 +15,11 @@ function handleAgeSubmit(input){
 }
 
 function handlePlanetSubmit(input){
-  console.log(input);
+  
+}
+
+function handleFunctionChoice(input){
+
 }
 
 window.addEventListener("load", function(){
@@ -27,4 +31,5 @@ window.addEventListener("load", function(){
     event.preventDefault();
     handlePlanetSubmit(document.getElementById("planet").value);
   });
+
 });
