@@ -1,10 +1,10 @@
 //create a user object
 // - take in their birthdate
 
-
+//name of file should probably be user
 export class User{
-  constructor(age){
-    this.age = age;
+  constructor(){
+    this.age;
     /*
     this.MERCURY = .24;
     this.VENUS = .62;
@@ -13,11 +13,19 @@ export class User{
     */
   }
 
+  setAge(age){
+    this.age = age;
+  }
+
   calculateAge(yearLength){ //yearLength as a decimal of earth years
     return this.age/yearLength;
   }
 
   calculateYearsSince(targetYear){
     return this.age - targetYear;
+  }
+
+  calculateYearsUntil(targetYear){
+    return targetYear - this.age;
   }
 }

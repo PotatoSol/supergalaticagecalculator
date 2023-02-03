@@ -1,6 +1,6 @@
 import {User} from "./../src/js/calculator.js";
 
-function handleAgeSubmit(input){
+function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
     //catch that nothing was put in, and yell at the user
     console.log('hello');
@@ -8,9 +8,7 @@ function handleAgeSubmit(input){
     //catch if no int was put in?
     console.log('wow!');
   }else{
-    console.log('aw');
-    //show next section
-    //hide this section
+    inputUser.setAge(input);
   }
 }
 
@@ -23,9 +21,10 @@ function handleFunctionChoice(input){
 }
 
 window.addEventListener("load", function(){
+  let myUser = new User();
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
-    handleAgeSubmit(document.getElementById("age").value);
+    handleAgeSubmit(document.getElementById("age").value, inputUser);
   });
   document.getElementById("planetForm").addEventListener("submit", function(event){
     event.preventDefault();
