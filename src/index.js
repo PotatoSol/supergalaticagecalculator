@@ -1,9 +1,14 @@
 import {User} from "./../src/js/calculator.js";
-//import {Game} from "./../src/js/game.js";
+
 function main(input){
-  console.log('hello');
   if(input.length === 0){
-    console.log('what');
+    //catch that nothing was put in, and yell at the user
+    console.log('hello');
+  }else if(!parseInt(input)){
+    //catch if no int was put in?
+    console.log('wow!');
+  }else{
+    console.log('aw');
   }
 }
 
