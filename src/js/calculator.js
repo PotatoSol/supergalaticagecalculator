@@ -16,4 +16,8 @@ export class User{
   calculateAge(yearLength){ //yearLength as a decimal of earth years
     return this.age/yearLength;
   }
+
+  calculateYearsSince(){
+
+  }
 }

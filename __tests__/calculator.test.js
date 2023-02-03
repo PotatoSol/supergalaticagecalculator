@@ -10,7 +10,7 @@ test('calculateAge()', () => {
   const myUser = new User(30);
   expect(myUser.calculateAge(.5)).toEqual(60);
 });
-test('yearsSince()', () => {
+test('calculateYearsSince()', () => {
   const myUser = new User(30);
-  expect(myUser.yearsSince(10)).toEqual(10);
+  expect(myUser.calculateYearsSince(10)).toEqual(10);
 });
