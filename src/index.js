@@ -1,7 +1,8 @@
 import {User} from "./../src/js/calculator.js";
 //import {Game} from "./../src/js/game.js";
 function main(input){
-  if(input === ""){
+  console.log('hello');
+  if(input.length === 0){
     console.log('what');
   }
 }
@@ -9,6 +10,6 @@ function main(input){
 window.addEventListener("load", function(){
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
-    main(parseInt(document.getElementById("age").value));
+    main(document.getElementById("age").value);
   });
 });
