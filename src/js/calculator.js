@@ -4,7 +4,7 @@
 
 export class User{
   constructor(age){
-    this.age
+    this.age = age;
   }
 
   calculateAge(yearLength){ //yearLength as a decimal of earth years
