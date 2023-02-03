@@ -28,6 +28,6 @@ test('calculateYearsUntil()', () => {
 });
 test('setPlanet()', () => {
   const myUser = new User();
-  myUser.setPlanet("mercury");
-  expect(myUser.planet).toEqual("mercury");
+  myUser.setPlanet("mars");
+  expect(myUser.planet).toEqual("mars");
 });
