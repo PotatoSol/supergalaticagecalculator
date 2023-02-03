@@ -3,9 +3,11 @@
 
 
 export class User{
-  constructor(month, day, year){
-    this.month = month;
-    this.day = day;
-    this.year = year;
+  constructor(age){
+    this.age
+  }
+
+  calculateAge(yearLength){ //yearLength in days
+    
   }
 }
