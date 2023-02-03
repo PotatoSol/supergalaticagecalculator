@@ -8,6 +8,9 @@ test('Declare a User Object', () =>{
 });
 test('calculateAge()', () => {
   const myUser = new User(30);
-  console.log(myUser.age);
   expect(myUser.calculateAge(.5)).toEqual(60);
+});
+test('yearsSince()', () => {
+  const myUser = new User(30);
+  expect(myUser.yearsSince(10)).toEqual(10);
 });
