@@ -5,10 +5,12 @@
 export class User{
   constructor(age){
     this.age = age;
-    const MERCURY = .24;
-    const VENUS = .62;
-    const MARS = 1.88;
-    const JUPITER = 11.86;
+    /*
+    this.MERCURY = .24;
+    this.VENUS = .62;
+    this.MARS = 1.88;
+    this.JUPITER = 11.86;
+    */
   }
 
   calculateAge(yearLength){ //yearLength as a decimal of earth years
