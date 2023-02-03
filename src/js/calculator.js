@@ -7,7 +7,7 @@ export class User{
     this.age
   }
 
-  calculateAge(yearLength){ //yearLength in days
+  calculateAge(yearLength){ //yearLength as a decimal of earth years
     
   }
 }
