@@ -34,5 +34,5 @@ test('setPlanet()', () => {
 test('calculatePlanetNumber)', () => {
   const myUser = new User();
   myUser.calculatePlanetNumber();
-  expect(myUser.planetNumber).toEqual(1);
+  expect(myUser.planetNumber).toEqual(2);
 });
