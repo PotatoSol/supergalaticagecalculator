@@ -35,6 +35,14 @@ test('calculatePlanetNumber)', () => {
   const myUser = new User();
   myUser.calculatePlanetNumber();
   expect(myUser.planetNumber).toEqual(-1);
+  myUser.setPlanet("mercury");
+  expect(myUser.planetNumber).toEqual(.24);
+  myUser.setPlanet("venus");
+  expect(myUser.planetNumber).toEqual(.62);
+  myUser.setPlanet("mars");
+  expect(myUser.planetNumber).toEqual(1.88);
+  myUser.setPlanet("jupiter");
+  expect(myUser.planetNumber).toEqual(11.86);
 });
 test('setFunctionChoice()', () => {
   const myUser = new User();

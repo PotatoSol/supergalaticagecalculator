@@ -22,6 +22,7 @@ export class User{
 
   setPlanet(planet){
     this.planet = planet;
+    this.calculatePlanetNumber();
   }
 
   setFunctionChoice(functionChoice){
