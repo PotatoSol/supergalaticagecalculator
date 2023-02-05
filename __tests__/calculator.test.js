@@ -31,3 +31,8 @@ test('setPlanet()', () => {
   myUser.setPlanet("mars");
   expect(myUser.planet).toEqual("mars");
 });
+test('calculatePlanetNumber)', () => {
+  const myUser = new User();
+  myUser.calculatePlanetNumber();
+  expect(myUser.planetNumber).toEqual(1);
+});
