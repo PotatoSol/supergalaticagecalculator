@@ -8,6 +8,7 @@ export class User{
     this.planet = "void";
     this.functionChoice = "void";
     this.planetNumber = -1;
+    this.moreYears = -1;
 
     /*
     this.MERCURY = .24;
@@ -28,6 +29,10 @@ export class User{
 
   setFunctionChoice(functionChoice){
     this.functionChoice = functionChoice;
+  }
+
+  setMoreYears(moreYears){
+    this.moreYears = moreYears;
   }
 
   calculateAge(yearLength){ //yearLength as a decimal of earth years
