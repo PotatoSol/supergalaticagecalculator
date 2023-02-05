@@ -15,8 +15,9 @@ describe ('checkInputs', () => {
 });
 test('checkInputs', () =>{
   const myUser = new User();
+  expect(checkInputs(myUser)).toEqual(false);
   myUser.setAge(24);
   myUser.setFunctionChoice("convert");
   myUser.setPlanet("mercury");
-  expect(checkInputs(myUser)).toEqual(false);
+  expect(checkInputs(myUser)).toEqual(true);
 });
