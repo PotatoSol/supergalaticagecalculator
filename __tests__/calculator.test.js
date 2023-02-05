@@ -49,6 +49,11 @@ test('setFunctionChoice()', () => {
   myUser.setFunctionChoice("until");
   expect(myUser.functionChoice).toEqual("until");
 });
+test('moreYears()', () => {
+  const myUser = new User();
+  myUser.setMoreYears(10);
+  expect(myUser.moreYears).toEqual(5);
+});
 test('showResults()', () => {
 
 });
