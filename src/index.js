@@ -50,10 +50,13 @@ export function doCalculation(user){
 
 export function showErrorMessage(value){
   if(value === 1){
+    document.getElementById('ageError').setAttribute("class", "error");
     document.getElementById('ageError').innerText = "Nothing entered, please input your age";
   } else if (value === 2){
+    document.getElementById('ageError').setAttribute("class", "error");
     document.getElementById('ageError').innerText = "Non-number entered, please input your age";
   } else { 
+    document.getElementById('ageError').setAttribute("class", "hidden");
     document.getElementById('ageError').innerText = "";
   }
 }
