@@ -1,5 +1,5 @@
 import {User} from "./../src/js/calculator.js";
-import "./../src/index.js";
+import {doCalculation} from "./../src/index.js";
 import "./../src/css/styles.css";
 
 describe ('doCalculation', () => {
@@ -10,5 +10,4 @@ test('doCalculation', () =>{
   myUser.setFunctionChoice("convert");
   myUser.setPlanet("mercury");
   expect(doCalculation(myUser)).toEqual(24);
-
 });

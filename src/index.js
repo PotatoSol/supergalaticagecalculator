@@ -1,7 +1,7 @@
 import {User} from "./../src/js/calculator.js";
 import './css/styles.css';
 
-function handleAgeSubmit(input, inputUser){
+export function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
     //catch that nothing was put in, and then yell at the user
     showErrorMessage(1);
@@ -14,35 +14,45 @@ function handleAgeSubmit(input, inputUser){
   }
 }
 
-function handlePlanetSubmit(input, inputUser){
+export function handlePlanetSubmit(input, inputUser){
   inputUser.setPlanet(input);
 }
 
-function handleFunctionChoiceSubmit(input, inputUser){
+export function handleFunctionChoiceSubmit(input, inputUser){
   inputUser.setFunctionChoice(input);
 }
 
-function checkInputs(user){
+export function checkInputs(user){
   if(user.age === -1 || user.planet === "void" || user.functionChoice === "void"){
     return false;
   } else {
     doCalculation(user);
+    return true;
   }
 }
 
-function doCalculation(user){
-  if(user.function === "convert"){
+export function doCalculation(user){
+  let returnNumber = 0;
+  if(user.functionChoice === "convert"){
     //do convert
+    console.log('hey');
+    returnNumber = user.age/user.planetNumber;
   } else if (user.function === "since"){
     //do since
+    //have to grab another input
   } else if (user.function === "until"){
     //do until
+    //have to grab another input
   } else {
     //should never happen, throw error message?
   }
+  console.log(user.age);
+  console.log(user.planetNumber);
+  console.log(user.functionChoice);
+  return returnNumber;
 }
 
-function showErrorMessage(value){
+export function showErrorMessage(value){
   if(value === 1){
     document.getElementById('ageError').innerText = "Nothing entered, please input your age";
   } else if (value === 2){

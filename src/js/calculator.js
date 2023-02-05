@@ -8,6 +8,7 @@ export class User{
     this.planet = "void";
     this.functionChoice = "void";
     this.planetNumber = -1;
+
     /*
     this.MERCURY = .24;
     this.VENUS = .62;
@@ -62,6 +63,6 @@ export class User{
   }
 
   showResult(){
-
+    
   }
 }
