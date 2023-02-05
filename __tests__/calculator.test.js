@@ -49,3 +49,6 @@ test('setFunctionChoice()', () => {
   myUser.setFunctionChoice("until");
   expect(myUser.functionChoice).toEqual("until");
 });
+test('showResults()', () => {
+
+});
