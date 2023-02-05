@@ -1,11 +1,7 @@
-body{
-  background-color:cadetblue;
-}
-
 .hidden {
   display: none;
-}
+};
 
 .error {
   color: darkred;
-}
+};

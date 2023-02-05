@@ -1,6 +1,6 @@
 import {User} from "./../src/js/calculator.js";
-import {doCalculation, checkInputs} from "./../src/index.js";
-import "./../src/css/styles.css";
+import "./../src/index.js";
+import "./css/styles.css";
 
 describe ('doCalculation', () => {
 });

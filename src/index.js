@@ -22,14 +22,24 @@ export function handleFunctionChoiceSubmit(input, inputUser){
   inputUser.setFunctionChoice(input);
 }
 
+export function handleMoreYearsSubmit(input, inputUser){
+  inputUser.setMoreYears(input);
+}
+
 export function checkInputs(user){
+  console.log('entered');
   if(user.age === -1 || user.planet === "void" || user.functionChoice === "void"){
     return false;
   } else {
-    doCalculation(user);
-    return true;
+    if(user.functionChoice == "since" || user.functionChoice == "until"){
+      showMoreYears();
+    } else {
+      doCalculation(user);
+      return true;
+    }
   }
 }
+
 
 export function doCalculation(user){
   let returnNumber = 0;
@@ -46,6 +56,20 @@ export function doCalculation(user){
     //should never happen, throw error message?
   }
   return returnNumber;
+}
+
+export function showMoreYears(){
+  document.getElementById('moreYearsUntil').setAttribute("class", "notHidden");
+  document.getElementById("functionForm").setAttribute("class", "hidden");
+  document.getElementById("planetForm").setAttribute("class", "hidden");
+  document.getElementById("ageForm").setAttribute("class", "hidden");
+}
+
+export function revertShowMoreYears(){
+  document.getElementById('moreYearsUntil').setAttribute("class", "hidden");
+  document.getElementById("functionForm").setAttribute("class", "notHidden");
+  document.getElementById("planetForm").setAttribute("class", "notHidden");
+  document.getElementById("ageForm").setAttribute("class", "notHidden");
 }
 
 export function showErrorMessage(value){
@@ -66,16 +90,23 @@ window.addEventListener("load", function(){
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
     handleAgeSubmit(document.getElementById("age").value, myUser);
-    console.log(myUser.age);
+    console.log('age');
+    checkInputs(myUser);
   });
   document.getElementById("planetForm").addEventListener("submit", function(event){
     event.preventDefault();
     handlePlanetSubmit(document.getElementById("planet").value, myUser);
-    console.log(myUser.planet);
+    console.log('planet');
+    checkInputs(myUser);
   });
   document.getElementById("functionForm").addEventListener("submit", function(event){
     event.preventDefault();
     handleFunctionChoiceSubmit(document.getElementById("function").value, myUser);
-    console.log(myUser.function);
+    console.log('function');
+    checkInputs(myUser);
+  });
+  document.getElementById("moreYearsUntil").addEventListener("submit", function(event){
+    event.preventDefault();
+    handleMoreYearsSubmit(document.getElementById("moreYears").value, myUser);
   });
 });
