@@ -35,7 +35,6 @@ export function doCalculation(user){
   let returnNumber = 0;
   if(user.functionChoice === "convert"){
     //do convert
-    console.log('hey');
     returnNumber = user.age/user.planetNumber;
   } else if (user.function === "since"){
     //do since
@@ -46,9 +45,6 @@ export function doCalculation(user){
   } else {
     //should never happen, throw error message?
   }
-  console.log(user.age);
-  console.log(user.planetNumber);
-  console.log(user.functionChoice);
   return returnNumber;
 }
 
