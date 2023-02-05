@@ -1,5 +1,6 @@
 import {User} from "./../src/js/calculator.js";
 import "./../src/index.js";
+import "./../src/css/styles.css";
 
 describe ('doCalculation', () => {
 });
