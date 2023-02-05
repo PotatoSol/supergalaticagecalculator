@@ -38,6 +38,6 @@ test('calculatePlanetNumber)', () => {
 });
 test('setFunctionChoice()', () => {
   const myUser = new User();
-  myUser.setFunctionChoice(1);
+  myUser.setFunctionChoice("until");
   expect(myUser.functionChoice).toEqual("until");
 });
