@@ -1,9 +1,11 @@
 import {User} from "./../src/js/calculator.js";
+import './css/styles.css'
 
 function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
     //catch that nothing was put in, and then yell at the user
     console.log('hello');
+    //document.getElementById('ageError').setAttribute('class', "notHidden");
   }else if(!parseInt(input)){
     //catch if no int was put in?
     console.log('wow!');
