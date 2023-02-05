@@ -51,8 +51,8 @@ test('setFunctionChoice()', () => {
 });
 test('moreYears()', () => {
   const myUser = new User();
-  myUser.setMoreYears(10);
-  expect(myUser.moreYears).toEqual(10);
+  myUser.setMoreYears(5);
+  expect(myUser.moreYears).toEqual(5);
 });
 test('showResults()', () => {
 
