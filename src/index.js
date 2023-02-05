@@ -2,7 +2,7 @@ import {User} from "./../src/js/calculator.js";
 
 function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
-    //catch that nothing was put in, and yell at the user
+    //catch that nothing was put in, and then yell at the user
     console.log('hello');
   }else if(!parseInt(input)){
     //catch if no int was put in?
