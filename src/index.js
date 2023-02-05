@@ -12,12 +12,12 @@ function handleAgeSubmit(input, inputUser){
   }
 }
 
-function handlePlanetSubmit(input){
-  
+function handlePlanetSubmit(input, inputUser){
+  inputUser.setPlanet(input);
 }
 
-function handleFunctionChoice(input){
-
+function handleFunctionChoiceSubmit(input, inputUser){
+  inputUser.setFunctionChoice(input);
 }
 
 window.addEventListener("load", function(){
@@ -25,10 +25,16 @@ window.addEventListener("load", function(){
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
     handleAgeSubmit(document.getElementById("age").value, myUser);
+    console.log(myUser.age);
   });
   document.getElementById("planetForm").addEventListener("submit", function(event){
     event.preventDefault();
-    handlePlanetSubmit(document.getElementById("planet").value);
+    handlePlanetSubmit(document.getElementById("planet").value, myUser);
+    console.log(myUser.planet);
   });
-  
+  document.getElementById("functionForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    handleFunctionChoiceSubmit(document.getElementById("function").value, myUser);
+    console.log(myUser.function);
+  });
 });
