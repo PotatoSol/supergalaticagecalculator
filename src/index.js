@@ -24,11 +24,11 @@ window.addEventListener("load", function(){
   let myUser = new User();
   document.getElementById("ageForm").addEventListener("submit",function(event){
     event.preventDefault();
-    handleAgeSubmit(document.getElementById("age").value, inputUser);
+    handleAgeSubmit(document.getElementById("age").value, myUser);
   });
   document.getElementById("planetForm").addEventListener("submit", function(event){
     event.preventDefault();
     handlePlanetSubmit(document.getElementById("planet").value);
   });
-
+  
 });
