@@ -36,3 +36,8 @@ test('calculatePlanetNumber)', () => {
   myUser.calculatePlanetNumber();
   expect(myUser.planetNumber).toEqual(-1);
 });
+test('setFunctionChoice()', () => {
+  const myUser = new User();
+  myUser.setFunctionChoice(1);
+  expect(myUser.functionChoice).toEqual("until");
+});
