@@ -1,5 +1,5 @@
 import {User} from "./../src/js/calculator.js";
-import './css/styles.css';
+//import './css/styles.css';
 
 export function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
@@ -85,28 +85,27 @@ export function showErrorMessage(value){
   }
 }
 
-window.addEventListener("load", function(){
-  let myUser = new User();
-  document.getElementById("ageForm").addEventListener("submit",function(event){
-    event.preventDefault();
-    handleAgeSubmit(document.getElementById("age").value, myUser);
-    console.log('age');
-    checkInputs(myUser);
-  });
-  document.getElementById("planetForm").addEventListener("submit", function(event){
-    event.preventDefault();
-    handlePlanetSubmit(document.getElementById("planet").value, myUser);
-    console.log('planet');
-    checkInputs(myUser);
-  });
-  document.getElementById("functionForm").addEventListener("submit", function(event){
-    event.preventDefault();
-    handleFunctionChoiceSubmit(document.getElementById("function").value, myUser);
-    console.log('function');
-    checkInputs(myUser);
-  });
-  document.getElementById("moreYearsUntil").addEventListener("submit", function(event){
-    event.preventDefault();
-    handleMoreYearsSubmit(document.getElementById("moreYears").value, myUser);
-  });
+
+let myUser = new User();
+document.getElementById("ageForm").addEventListener("submit",function(event){
+  event.preventDefault();
+  handleAgeSubmit(document.getElementById("age").value, myUser);
+  console.log('age');
+  checkInputs(myUser);
+});
+document.getElementById("planetForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  handlePlanetSubmit(document.getElementById("planet").value, myUser);
+  console.log('planet');
+  checkInputs(myUser);
+});
+document.getElementById("functionForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  handleFunctionChoiceSubmit(document.getElementById("function").value, myUser);
+  console.log('function');
+  checkInputs(myUser);
+});
+document.getElementById("moreYearsUntil").addEventListener("submit", function(event){
+  event.preventDefault();
+  handleMoreYearsSubmit(document.getElementById("moreYears").value, myUser);
 });
