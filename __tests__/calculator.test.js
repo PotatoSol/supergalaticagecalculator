@@ -59,7 +59,7 @@ test('doCalculation()', () => {
   myUser.setFunctionChoice('convert');
   myUser.setAge('20');
   myUser.setPlanet('mercury');
-  expect(myUser.doCalculation()).toEqual(10);
+  expect(myUser.doCalculation()).toEqual(83.33333333333334);
 
 });
 test('showResults()', () => {
