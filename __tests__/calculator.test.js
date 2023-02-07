@@ -54,6 +54,14 @@ test('moreYears()', () => {
   myUser.setMoreYears(10);
   expect(myUser.moreYears).toEqual(10);
 });
+test('doCalculation()', () => {
+  const myUser = new User();
+  myUser.setFunctionChoice('convert');
+  myUser.setAge('20');
+  myUser.planetNumber('mercury');
+  expect(myUser.doCalculation()).toEqual(10);
+
+});
 test('showResults()', () => {
 
 });

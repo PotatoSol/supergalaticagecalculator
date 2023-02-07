@@ -66,6 +66,24 @@ export class User{
       this.planetNumber = -1;
     }
   }
+  
+  doCalculation(){
+    let returnNumber = 0;
+    if(this.functionChoice === "convert"){
+      //do convert
+      returnNumber = this.age/this.planetNumber;
+    } else if (this.function === "since"){
+      //do since
+      //have to grab another input
+    } else if (this.function === "until"){
+      //do until
+      //have to grab another input
+    } else {
+      //should never happen, throw error message?
+    }
+    return returnNumber;
+  }
+
 
   showResult(){
     

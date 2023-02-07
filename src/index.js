@@ -1,6 +1,6 @@
 import {User} from "./../src/js/calculator.js";
 //import './css/styles.css';
-
+//need to take out all ui logic and move it into another fiilenpx
 export function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
     //catch that nothing was put in, and then yell at the user
@@ -40,7 +40,7 @@ export function checkInputs(user){
   }
 }
 
-
+/*
 export function doCalculation(user){
   let returnNumber = 0;
   if(user.functionChoice === "convert"){
@@ -57,6 +57,7 @@ export function doCalculation(user){
   }
   return returnNumber;
 }
+*/
 
 export function showMoreYears(){
   document.getElementById('moreYearsUntil').setAttribute("class", "notHidden");
