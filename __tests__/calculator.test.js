@@ -58,7 +58,7 @@ test('doCalculation()', () => {
   const myUser = new User();
   myUser.setFunctionChoice('convert');
   myUser.setAge('20');
-  myUser.planetNumber('mercury');
+  myUser.setPlanet('mercury');
   expect(myUser.doCalculation()).toEqual(10);
 
 });
