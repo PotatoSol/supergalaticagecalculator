@@ -18,23 +18,6 @@ export class User{
     */
   }
 
-  setAge(age){
-    this.age = age;
-  }
-
-  setPlanet(planet){
-    this.planet = planet;
-    this.calculatePlanetNumber();
-  }
-
-  setFunctionChoice(functionChoice){
-    this.functionChoice = functionChoice;
-  }
-
-  setMoreYears(moreYears){
-    this.moreYears = moreYears;
-  }
-
   calculateAge(yearLength){ //yearLength as a decimal of earth years
     return this.age/yearLength;
   }
@@ -82,10 +65,5 @@ export class User{
       //should never happen, throw error message?
     }
     return returnNumber;
-  }
-
-
-  showResult(){
-    
   }
 }

@@ -15,15 +15,16 @@ export function handleAgeSubmit(input, inputUser){
 }
 
 export function handlePlanetSubmit(input, inputUser){
-  inputUser.setPlanet(input);
+  inputUser.planet = input;
+  inputUser.calculatePlanetNumber();
 }
 
 export function handleFunctionChoiceSubmit(input, inputUser){
-  inputUser.setFunctionChoice(input);
+  inputUser.functionChoice = input;
 }
 
 export function handleMoreYearsSubmit(input, inputUser){
-  inputUser.setMoreYears(input);
+  inputUser.moreYears = input;
 }
 
 export function checkInputs(user){
