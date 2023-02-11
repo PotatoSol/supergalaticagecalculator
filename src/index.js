@@ -1,7 +1,8 @@
 import {User} from "./../src/js/calculator.js";
+import "./../src/js/index.html";
 //import './css/styles.css';
 //need to take out all ui logic and move it into another fiilenpx
-export function handleAgeSubmit(input, inputUser){
+function handleAgeSubmit(input, inputUser){
   if(input.length === 0){
     //catch that nothing was put in, and then yell at the user
     showErrorMessage(1);
@@ -14,20 +15,19 @@ export function handleAgeSubmit(input, inputUser){
   }
 }
 
-export function handlePlanetSubmit(input, inputUser){
+function handlePlanetSubmit(input, inputUser){
   inputUser.planet = input;
   inputUser.calculatePlanetNumber();
 }
 
-export function handleFunctionChoiceSubmit(input, inputUser){
+function handleFunctionChoiceSubmit(input, inputUser){
   inputUser.functionChoice = input;
 }
-
-export function handleMoreYearsSubmit(input, inputUser){
+function handleMoreYearsSubmit(input, inputUser){
   inputUser.moreYears = input;
 }
 
-export function checkInputs(user){
+function checkInputs(user){
   console.log('entered');
   if(user.age === -1 || user.planet === "void" || user.functionChoice === "void"){
     return false;
@@ -60,21 +60,21 @@ export function doCalculation(user){
 }
 */
 
-export function showMoreYears(){
+function showMoreYears(){
   document.getElementById('moreYearsUntil').setAttribute("class", "notHidden");
   document.getElementById("functionForm").setAttribute("class", "hidden");
   document.getElementById("planetForm").setAttribute("class", "hidden");
   document.getElementById("ageForm").setAttribute("class", "hidden");
 }
 
-export function revertShowMoreYears(){
+function revertShowMoreYears(){
   document.getElementById('moreYearsUntil').setAttribute("class", "hidden");
   document.getElementById("functionForm").setAttribute("class", "notHidden");
   document.getElementById("planetForm").setAttribute("class", "notHidden");
   document.getElementById("ageForm").setAttribute("class", "notHidden");
 }
 
-export function showErrorMessage(value){
+function showErrorMessage(value){
   if(value === 1){
     document.getElementById('ageError').setAttribute("class", "error");
     document.getElementById('ageError').innerText = "Nothing entered, please input your age";
@@ -92,19 +92,16 @@ let myUser = new User();
 document.getElementById("ageForm").addEventListener("submit",function(event){
   event.preventDefault();
   handleAgeSubmit(document.getElementById("age").value, myUser);
-  console.log('age');
   checkInputs(myUser);
 });
 document.getElementById("planetForm").addEventListener("submit", function(event){
   event.preventDefault();
   handlePlanetSubmit(document.getElementById("planet").value, myUser);
-  console.log('planet');
   checkInputs(myUser);
 });
 document.getElementById("functionForm").addEventListener("submit", function(event){
   event.preventDefault();
   handleFunctionChoiceSubmit(document.getElementById("function").value, myUser);
-  console.log('function');
   checkInputs(myUser);
 });
 document.getElementById("moreYearsUntil").addEventListener("submit", function(event){

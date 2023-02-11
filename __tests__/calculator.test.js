@@ -72,10 +72,12 @@ test('doCalculation()', () => {
   myUser.calculatePlanetNumber();
   expect(myUser.doCalculation()).toEqual(83.33333333333334);
   myUser.age = 56;
-  myUser.moreYears = 10;
+  myUser.moreYears = 43;
   myUser.functionChoice = "since";
-  expect(myUser.doCalculation()).toEqual(10);
-  myUser.moreYears = 30;
+  expect(myUser.doCalculation()).toEqual(54.16666666666667);
+  myUser.moreYears = 61;
   myUser.functionChoice = "until";
-  expect(myUser.doCalculation()).toEqual(10);
+  expect(myUser.doCalculation()).toEqual(20.833333333333336);
+  myUser.functionChoice = "error";
+  expect(myUser.doCalculation()).toEqual(-1);
 });

@@ -55,16 +55,17 @@ export class User{
     if(this.functionChoice === "convert"){
       //do convert
       returnNumber = this.age/this.planetNumber;
-    } else if (this.function === "since"){
+    } else if (this.functionChoice === "since"){
       //do since
       //have to grab another input
       returnNumber = (this.age - this.moreYears)/this.planetNumber;
-    } else if (this.function === "until"){
+    } else if (this.functionChoice === "until"){
       //do until
       //have to grab another input
-      returnNumber = (this.moreYears - this.age)/this.planet;
+      returnNumber = (this.moreYears - this.age)/this.planetNumber;
     } else {
       //should never happen, throw error message?
+      returnNumber = -1;
     }
     return returnNumber;
   }
