@@ -71,6 +71,7 @@ test('doCalculation()', () => {
   myUser.planet = "mercury";
   myUser.calculatePlanetNumber();
   expect(myUser.doCalculation()).toEqual(83.33333333333334);
+  myUser.age = 56;
   myUser.moreYears = 10;
   myUser.functionChoice = "since";
   expect(myUser.doCalculation()).toEqual(10);
