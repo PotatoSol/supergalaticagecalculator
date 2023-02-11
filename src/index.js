@@ -35,7 +35,7 @@ export function checkInputs(user){
     if(user.functionChoice == "since" || user.functionChoice == "until"){
       showMoreYears();
     } else {
-      doCalculation(user);
+      user.doCalculation();
       return true;
     }
   }

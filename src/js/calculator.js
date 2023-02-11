@@ -58,9 +58,11 @@ export class User{
     } else if (this.function === "since"){
       //do since
       //have to grab another input
+      returnNumber = (this.age - this.moreYears)/this.planetNumber;
     } else if (this.function === "until"){
       //do until
       //have to grab another input
+      returnNumber = (this.moreYears - this.age)/this.planet;
     } else {
       //should never happen, throw error message?
     }
